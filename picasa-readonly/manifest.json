@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
-	"name": "Readonly Picasa Web Album",
-	"description": "Make the Picasa Web Album and Google+ Photos readonly.",
-	"version": "1.0",
+	"name": "Picasa Readonly",
+	"description": "Remove the album and photo modify buttons in the Picasa Web Album to avoid unattentional removal.",
+	"version": "0.0.2",
 
 	"background": {
 		"scripts": [ "background.js" ]
@@ -12,9 +12,7 @@
 		{
 			"matches": [
 				"http://picasaweb.google.com/*",
-				"https://picasaweb.google.com/*",
-				"http://plus.google.com/*",
-				"https://plus.google.com/*"
+				"https://picasaweb.google.com/*"
 			],
 			"js": [
 				"jquery.min.js", "contentscript.js"
@@ -25,7 +23,11 @@
 	],
 
 	"page_action": {
-		"default_icon": "icon.png"
+		"default_icon": {
+            "19": "picasa-readonly-19.png",
+            "38": "picasa-readonly-38.png"
+        },
+        "default_title": "Picasa Readonly"
 	},
 
 	"permissions": [

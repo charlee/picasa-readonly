@@ -10,10 +10,6 @@
 
 				$(document).delegate("a.gphoto-context-current, a.goog-icon-list-icon-link", "click", this.clearPicasaLinks);
 				this.clearPicasaLinks();
-
-			} else if (url.match(/https?:\/\/plus.google.com\/u\/\d+\/photos\/.*/)) {
-				$(document).delegate("div.m-la-Kb", "click", this.clearGooglePlusLinks);
-				this.clearGooglePlusLinks();
 			}
 
 		},
@@ -29,16 +25,6 @@
 				$("#lhid_albumprop a.lhcl_linkHover").hide();    // album prop change links
 				$(".lhcl_sidebox .goog-button").hide();			// share button
 				$("#lhid_acl_notification_checkbox").closest("div").hide(); // notification checkbox
-			}, 100);
-		},
-
-		clearGooglePlusLinks: function() {
-			console.log("clear");
-			window.setTimeout(function() {
-				$(".Rqa>div").each(function(idx, elem) {
-					if (idx != 3) { $(elem).hide(); }
-				});
-				$(".H63B2c").hide();
 			}, 100);
 		},
 
